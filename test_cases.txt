@@ -1,0 +1,13 @@
+
+airmap:
+  http://localhost:5000/airmap
+
+travel:
+  http://localhost:5000/cleanroute1/Chennai/Nagpur
+  http://localhost:5000/cleanroute1/Chennai/Mumbai
+  http://localhost:5000/cleanroute1/Chennai/Bengaluru
+  http://localhost:5000/cleanroute1/Chennai/Puducherry
+  http://localhost:5000/cleanroute1/Chennai/Visakhapatnam
+  http://localhost:5000/cleanroute1/Chennai/Madurai
+
+  http://localhost:5000/cleanroute/80.2707,13.0827/77.5946,12.9716

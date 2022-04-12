@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kaatru</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+  <link rel="icon" href="{{url_for('static', filename='icon16.png')}}" type="image/x-icon">
+</head>
+
+<body>
+  <div class="float-container"></div>
+  <div class="Heading float-child-1">
+    <img class="logo" src="{{url_for('static', filename='logo.png')}}" alt="logo">
+    <h1>Exposure Assessment</h1>
+    <p><b>PM2.5 Exposure Along A Route </b> </p>
+
+    <form action="{{ url_for('clean_route') }}" method="post">
+      <label for="origin">Origin City:</label>
+      <input type="text" id="origin" name="origin" placeholder="origin">
+      <label for="destination">Destination City:</label>
+      <input type="text" id="destination" name="destination" placeholder="destination">
+      <br>
+      <button type="submit">Get Route</button>
+    </form>
+  </div>
+
+  <div class="Map float-child-2">
+    {{cmap|safe}}
+  </div>
+</body>
+
+</html>
