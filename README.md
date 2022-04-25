@@ -19,9 +19,9 @@ GET /cleanest_route?
 }
 ```
 
-The `message` attribute contains a message commonly used to indicate errors or, in the case of deleting a resource, success that the resource was properly deleted.
+The `message` attribute contains a message commonly used to indicate status of the request.
 
-The `success` attribute describes if the transaction was successful or not.
+The `status` attribute contains the HTTP status code.
 
 The `data` attribute contains a list of routes found for the given origin and destination with its respective `pm 2.5` aggregate in the following format
 
