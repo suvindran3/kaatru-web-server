@@ -52,3 +52,52 @@ Server returns the following status codes in its API:
 | 403 | `ACCESS RESTRICTED` |
 | 404 | `NOT FOUND` |
 | 500 | `INTERNAL SERVER ERROR` |
+
+#
+
+```http
+GET /air_quality?
+```
+
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `lat` | `float` | **Required**. latitude of the querying location |
+| `lng` | `float` | **Required**. longitude of the querying location |
+
+## Responses
+
+```javascript
+{
+  "message": string,
+  "status": int,
+  "data": json
+}
+```
+
+The `message` attribute contains a message commonly used to indicate status of the request.
+
+The `status` attribute contains the HTTP status code.
+
+The `data` attribute contains a JSON object containing latitude, longitude and the respective pm2.5 in the following format
+
+```javascript
+{
+  "lat": float,
+  "lng": float,
+  "pm2.5": float
+}
+```
+
+## Status Codes
+
+Server returns the following status codes in its API:
+
+| Status Code | Description |
+| :--- | :--- |
+| 200 | `OK` |
+| 400 | `BAD REQUEST` |
+| 403 | `ACCESS RESTRICTED` |
+| 404 | `NOT FOUND` |
+| 500 | `INTERNAL SERVER ERROR` |
+
+#
